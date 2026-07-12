@@ -6,7 +6,7 @@ A terminal-based user interface application for managing Monday.com tickets with
 ## Functional Requirements
 
 ### Core Features
-- Connect to Monday.com official REST API using personal access token
+- Connect to Monday.com official GraphQL API v2 using personal access token
 - Display tickets organized by status (todo, in progress, done)
 - View ticket details including name, assignees, due date, description
 - Create new tickets
@@ -29,7 +29,7 @@ A terminal-based user interface application for managing Monday.com tickets with
 ## Technical Requirements
 
 ### API Integration
-- Official Monday.com REST API v2 implementation
+- Official Monday.com GraphQL API v2 implementation
 - Secure handling of authentication token (personal access token)
 - Error handling for network issues and API limitations
 - Support for pagination when retrieving large datasets
@@ -148,11 +148,11 @@ Actions:
 - board_id: String
 
 ### API Endpoints Used
-- GET /boards - Retrieve all boards and projects
-- GET /items - Retrieve items from a specific board/list
-- POST /items - Create new item/ticket
-- PUT /items/{id} - Update existing item
-- DELETE /items/{id} - Delete item
+- boards - Retrieve all boards and projects
+- items - Retrieve items from a specific board/list
+- create_item - Create new item/ticket
+- change_column_value - Update existing item
+- archive_item - Delete item
 
 ## Technical Implementation
 
