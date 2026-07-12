@@ -17,6 +17,9 @@ A terminal-based user interface application for managing Monday.com tickets with
 - Log off functionality to securely delete stored token
 - Show tickets for current sprint by default
 - Show only tickets assigned to logged in user by default
+- Refresh views with fresh data when displayed
+- Auto-refresh views at configurable intervals (30s, 1m, 5m)
+- Display current refresh frequency on screen
 
 ### UI Requirements
 - Status-based view organization
@@ -25,6 +28,7 @@ A terminal-based user interface application for managing Monday.com tickets with
 - Terminal window with responsive layout
 - Clear visual distinction between different ticket statuses
 - Search/filter capabilities within each status group
+- Display current refresh frequency on screen after username
 
 ## Technical Requirements
 
@@ -50,7 +54,7 @@ A terminal-based user interface application for managing Monday.com tickets with
 ### Main Dashboard Layout
 ```
 ┌────────────────────────────────────────────────────────────────┐
-│ Monday.com TUI Client - Logged in as: John Smith               │
+│ Monday.com TUI Client - Logged in as: John Smith (5m)          │
 ├────────────────────────────────────────────────────────────────┤
 │ Boards: [Project Alpha] [Project Beta] [All Projects]          │
 ├────────────────────────────────────────────────────────────────┤
@@ -86,7 +90,7 @@ A terminal-based user interface application for managing Monday.com tickets with
 ### Status Drill-down View
 ```
 ┌────────────────────────────────────────────────────────────────┐
-│ Monday.com TUI Client - Logged in as: John Smith               │
+│ Monday.com TUI Client - Logged in as: John Smith (5m)          │
 ├────────────────────────────────────────────────────────────────┤
 │ Boards: [Project Alpha] [Project Beta] [All Projects]          │
 ├────────────────────────────────────────────────────────────────┤
@@ -120,6 +124,7 @@ Actions:
   Ctrl+Alt+R - Refresh data
   Ctrl+Alt+H - Show help
   Ctrl+Alt+L - Log off
+  Ctrl+Alt+F - Change refresh frequency (30s, 1m, 5m)
 ```
 
 ## User Interaction Flow
