@@ -8,22 +8,25 @@ This is a Kotlin-based TUI (Terminal User Interface) client that allows users to
 
 ## Features
 
-- Connects to Monday.com using the official REST API
-- Displays user's tickets/tasks in a terminal interface
-- View ticket information including status, assignees, due dates
+- Connects to Monday.com using the official GraphQL API v2
+- Displays user's tickets/tasks organized by status (todo, in progress, done)
+- View ticket information including name, assignees, due dates, description
 - Navigate through multiple boards and lists within Monday.com
+- Filter tickets by assignee and status columns  
+- Show only tickets assigned to logged-in user for current sprint by default
+- Securely store API token after first input with log off functionality
 
 ## Technologies
 
-- Built with Kotlin targeting JVM
-- Terminal User Interface framework (framework selection pending)
-- Monday.com Official REST API client
+- Built with Kotlin targeting JVM 26
+- Terminal User Interface framework: Mosaic (Jetpack Compose for TUI)
+- Monday.com Official GraphQL API v2 client
 
 ## Installation
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone git@github.com:fermentedDairy/fd-monday-tui.git
    ```
 
 2. Build the project:
@@ -44,3 +47,6 @@ Before running, configure your Monday.com API token in the settings.
 
 - `src/main/kotlin/` - Main source code directory
 - `pom.xml` - Maven build configuration
+- `AGENTS.md` - Developer guidelines for understanding project structure and workflows
+- `spec.md` - Complete specification of features, UI design, and technical requirements
+- `MondayApi.md` - Documentation of Monday.com GraphQL API integration patterns
