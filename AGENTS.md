@@ -21,6 +21,10 @@
 - Sprint timeline columns contain start/end dates used to determine current sprints
 - Default view shows tickets assigned to logged-in user for current sprint
 
+## Implementation Guidelines
+- When implementing a section from the plan, mark that section as "DONE" in Plan.md
+- Each implemented phase should be clearly marked as completed with "DONE" status
+
 ## Security
 - API token stored securely after initial input
 - Implement log off functionality to remove stored token
