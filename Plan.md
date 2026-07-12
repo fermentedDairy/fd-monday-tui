@@ -9,6 +9,7 @@
 1. **GraphQL Client Implementation** - Implement Monday.com API v2 GraphQL client with proper headers (Authorization, Content-Type, API-Version) 
 2. **Authentication Flow Development** - Build secure token handling mechanism that prompts users once and persists tokens for subsequent sessions
 3. **User Context Retrieval** - Implement `me` query to fetch logged-in user ID required for assignee filtering
+4. **Board Retrieval** - Fetch all boards/projects from Monday.com for project selection functionality
 
 ## Phase 3: Core Functionality (High Priority)  
 1. **Ticket CRUD Operations** - Implement all CRUD operations through GraphQL:
@@ -16,7 +17,7 @@
    - Update items with change_column_value mutations  
    - Delete/Archive items with archive_item mutation
    - Retrieve items using boards and items_page_by_column_values queries
-2. **Board Management** - Fetch all boards for project selection functionality
+2. **Sprint Detection** - Identify sprint boards by querying all boards and examining board kinds/columns to determine current sprints
 
 ## Phase 4: UI Implementation (Medium Priority)
 1. **Main Dashboard Layout** - Create the primary terminal view showing TODO/IN_PROGRESS/DONE status columns with proper visual distinction
