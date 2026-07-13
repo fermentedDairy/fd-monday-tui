@@ -130,6 +130,32 @@ query {
 }
 ```
 
+## Getting All Available Status Columns
+
+To retrieve all status columns and their available labels from a board:
+
+```graphql
+query {
+  boards(ids: [BOARD_ID]) {
+    columns {
+      id
+      title
+      type
+      settings_str
+    }
+  }
+}
+```
+
+For the schema of status column definitions:
+```graphql
+query {
+  get_column_type_schema(
+    type: status
+  )
+}
+```
+
 ## User Context
 
 ### Get Current User ID
@@ -241,6 +267,18 @@ mutation {
 - All queries and mutations are sent as POST requests with JSON body 
 - The API version header should be used to target a specific version (recommended: 2024-10)
 - Personal access tokens grant permissions based on the user's role
-- The GraphQL schema can be discovered using `get_graphql_schema` (MCP tools)
+- The GraphQL schema can be discovered using `get_column_type_schema` (MCP tools)
 - Filtering is done via `items_page_by_column_values` for column-specific filtering
 - Status columns support filtering with numeric index values rather than text labels
+
+## Column Types Reference
+
+The Monday.com API supports multiple column types including:
+- `status` - For status columns with customizable labels and colors
+- `date` - For date values  
+- `numbers` - For numerical data
+- `people` - For person assignments
+- `text` - For text content
+- `dropdown` - For dropdown selections
+- `timeline` - For timeline tracking
+- And 30+ other column types

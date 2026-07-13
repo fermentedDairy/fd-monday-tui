@@ -10,6 +10,7 @@
 2. **Authentication Flow Development** - Build secure token handling mechanism that prompts users once and persists tokens for subsequent sessions
 3. **User Context Retrieval** - Implement `me` query to fetch logged-in user ID required for assignee filtering
 4. **Board Retrieval** - Fetch all boards/projects from Monday.com for project selection functionality
+5. **API Client Testing** - Implement unit tests using mock server for GraphQL client against a mock server, plus manual test suite excluded from Maven test target by default
 
 ## Phase 3: Core Functionality (High Priority)  
 1. **Ticket CRUD Operations** - Implement all CRUD operations through GraphQL:
@@ -18,9 +19,10 @@
    - Delete/Archive items with archive_item mutation
    - Retrieve items using boards and items_page_by_column_values queries
 2. **Sprint Detection** - Identify sprint boards by querying all boards and examining board kinds/columns to determine current sprints
+3. **Core Functionality Testing** - Implement unit tests for core functionality classes using mocked GraphQL client, plus manual test suite excluded from Maven test target by default
 
 ## Phase 4: UI Implementation (Medium Priority)
-1. **Main Dashboard Layout** - Create the primary terminal view showing TODO/IN_PROGRESS/DONE status columns with proper visual distinction
+1. **Main Dashboard Layout** - Create the primary terminal view showing all available status columns with proper visual distinction
 2. **Navigation System** - Implement keyboard navigation using arrow keys, enter, escape as specified in mockups
 3. **Status Drill-down Views** - Build detailed ticket information screens for each status group
 
