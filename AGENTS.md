@@ -23,7 +23,6 @@
 
 ## Implementation Guidelines
 - When implementing a section from the plan, mark that section as "DONE" in Plan.md
-- Each implemented phase should be clearly marked as completed with "DONE" status
 
 ## Security
 - API token stored securely after initial input
