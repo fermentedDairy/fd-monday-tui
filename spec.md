@@ -7,7 +7,7 @@ A terminal-based user interface application for managing Monday.com tickets with
 
 ### Core Features
 - Connect to Monday.com official GraphQL API v2 using personal access token
-- Display tickets organized by status (todo, in progress, done)
+- Display tickets organized by status columns defined in each project
 - View ticket details including name, assignees, due date, description
 - Create new tickets
 - Edit existing tickets (name, status, assignee, due date)
@@ -37,6 +37,7 @@ A terminal-based user interface application for managing Monday.com tickets with
 - Secure handling of authentication token (personal access token)
 - Error handling for network issues and API limitations
 - Support for pagination when retrieving large datasets
+- Retrieve status column definitions from boards to determine available statuses
 
 ### Data Management
 - Local caching of ticket data for better performance
@@ -145,7 +146,7 @@ Actions:
 ### Ticket Structure
 - id: String
 - name: String
-- status: Enum (todo, in progress, done)
+- status: String (status column value from project configuration)
 - description: String
 - due_date: Date/DateTime
 - assignees: List<String>
@@ -179,7 +180,7 @@ The application will use **Mosaic** - a Kotlin library for building terminal UIs
 Ticket {
     id: String
     name: String
-    status: StatusEnum (TODO, IN_PROGRESS, DONE)
+    status: String (status column value from project configuration)
     assignees: List<User>
     dueDate: LocalDate?
     description: String?
@@ -208,3 +209,4 @@ The application will:
 - Support fully CRUD operations through GraphQL endpoints
 - Implement filtering by assignee and status columns using `items_page_by_column_values`
 - Retrieve the logged-in user's ID using the `me` query to identify the authenticated user
+- Retrieve all available statuses from the board's status column definitions for dynamic display
