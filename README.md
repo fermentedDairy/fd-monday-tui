@@ -31,12 +31,12 @@ This is a Kotlin-based TUI (Terminal User Interface) client that allows users to
 
 2. Build the project:
    ```bash
-   ./mvnw clean package
+   ./gradlew clean build
    ```
 
 3. Run the application:
    ```bash
-   ./mvnw exec:java
+   ./gradlew run
    ```
 
 ## Configuration
@@ -46,7 +46,8 @@ Before running, configure your Monday.com API token in the settings.
 ## Project Structure
 
 - `src/main/kotlin/` - Main source code directory
-- `pom.xml` - Maven build configuration
+- `build.gradle.kts` - Gradle build configuration
+- `settings.gradle.kts` - Gradle settings configuration
 - `AGENTS.md` - Developer guidelines for understanding project structure and workflows
 - `spec.md` - Complete specification of features, UI design, and technical requirements
 - `MondayApi.md` - Documentation of Monday.com GraphQL API integration patterns

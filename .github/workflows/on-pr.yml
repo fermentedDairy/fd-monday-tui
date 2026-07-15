@@ -19,19 +19,19 @@ jobs:
         java-version: '26'
         distribution: 'temurin'
         
-    - name: Cache Maven dependencies
+    - name: Cache Gradle dependencies
       uses: actions/cache@v4
       with:
-        path: ~/.m2/repository
-        key: mvn-${{ hashFiles('**/pom.xml') }}
+        path: ~/.gradle/caches
+        key: gradle-${{ hashFiles('**/*.gradle.kts', '**/settings.gradle.kts') }}
         restore-keys: |
-          mvn-
+          gradle-
           
     - name: Build project
-      run: ./mvnw clean compile
+      run: ./gradlew clean build
       
     - name: Run tests
-      run: ./mvnw test
+      run: ./gradlew test
       
     - name: Verify project
-      run: ./mvnw verify
+      run: ./gradlew verify

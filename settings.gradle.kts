@@ -1,0 +1,1 @@
+rootProject.name = "fd_monday_tui"
