@@ -19,6 +19,14 @@ jobs:
         java-version: '26'
         distribution: 'temurin'
         
+    - name: Cache Maven dependencies
+      uses: actions/cache@v4
+      with:
+        path: ~/.m2/repository
+        key: mvn-${{ hashFiles('**/pom.xml') }}
+        restore-keys: |
+          mvn-
+          
     - name: Build project
       run: ./mvnw clean compile
       
