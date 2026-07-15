@@ -6,9 +6,9 @@
 - UI framework: Mosaic (Jetpack Compose for TUI)
 
 ## Key Commands
-- Run application: `mvn exec:java`
-- Build project: `mvn clean package`
-- Execute tests: `mvn test`
+- Run application: `./mvnw exec:java`
+- Build project: `./mvnw clean package`
+- Execute tests: `./mvnw test`
 
 ## API Integration
 - Monday.com GraphQL API v2 at `https://api.monday.com/v2`
