@@ -1,11 +1,10 @@
 package org.fermented.dairy.tui.monday.api.impl
 
-import okhttp3.*
+import okhttp3.OkHttpClient
 import org.fermented.dairy.tui.monday.api.MondayApiClient
 import org.fermented.dairy.tui.monday.model.Board
 import org.fermented.dairy.tui.monday.model.Ticket
 import org.fermented.dairy.tui.monday.model.User
-import java.io.IOException
 
 class MondayApiClientImpl(private val token: String) : MondayApiClient {
     private val client = OkHttpClient()

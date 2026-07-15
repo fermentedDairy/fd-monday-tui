@@ -24,3 +24,4 @@ interface MondayApiClient {
         val columnValues: Map<String, Any>
     )
 }
+

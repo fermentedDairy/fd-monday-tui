@@ -1,7 +1,5 @@
 package org.fermented.dairy.tui.monday.auth
 
-import java.io.File
-
 class AuthServiceImpl : AuthService {
     private var token: String? = null
     

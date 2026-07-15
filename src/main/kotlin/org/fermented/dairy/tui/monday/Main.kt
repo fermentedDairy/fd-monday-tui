@@ -12,3 +12,4 @@ fun main() {
     println("Current config: $appConfig")
 }
 
+
