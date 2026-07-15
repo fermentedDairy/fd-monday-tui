@@ -6,9 +6,9 @@
 - UI framework: Mosaic (Jetpack Compose for TUI)
 
 ## Key Commands
-- Run application: `mvn exec:java`
-- Build project: `mvn clean package`
-- Execute tests: `mvn test`
+- Run application: `./mvnw exec:java`
+- Build project: `./mvnw clean package`
+- Execute tests: `./mvnw test`
 
 ## API Integration
 - Monday.com GraphQL API v2 at `https://api.monday.com/v2`
@@ -27,3 +27,8 @@
 ## Security
 - API token stored securely after initial input
 - Implement log off functionality to remove stored token
+
+## Code Quality
+- Code should have no compiler warnings, all warnings should be fixed or suppressed
+  - Trivial problems like unused variables can be fixed automatically
+  - Never suppress a warning without asking first, warning suppressions should have comments explaining why the warning cannnot be fixed.

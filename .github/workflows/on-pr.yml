@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Setup Java
+      uses: actions/setup-java@v4
+      with:
+        java-version: '26'
+        distribution: 'temurin'
+        
+    - name: Build project
+      run: ./mvnw clean compile
+      
+    - name: Run tests
+      run: ./mvnw test
+      
+    - name: Verify project
+      run: ./mvnw verify
