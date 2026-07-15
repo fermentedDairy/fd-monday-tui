@@ -1,0 +1,32 @@
+# Detekt Configuration
+
+build:
+  maxIssues: 0
+  excludeCorrectable: false
+  weights:
+    complexity: 2
+    formatting: 1
+    longParameterList: 1
+    shallowNesting: 1
+
+processors:
+  active: true
+  exclude:
+    - 'DetektProgressListener'
+  # include:
+  #   - 'FunctionCountProcessor'
+  #   - 'PropertyCountProcessor'
+  #   - 'ClassCountProcessor'
+  #   - 'PackageCountProcessor'
+  #   - 'KtFileCountProcessor'
+
+# Enable unused imports detection explicitly
+errors:
+  excludes: []
+  # This configuration ensures that unused imports are detected
+
+# Rules configuration to enable specific rules including UnusedImports
+rules:
+  active: true
+  UnusedImport:
+    active: true
