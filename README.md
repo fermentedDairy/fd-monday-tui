@@ -31,12 +31,12 @@ This is a Kotlin-based TUI (Terminal User Interface) client that allows users to
 
 2. Build the project:
    ```bash
-   mvn clean package
+   ./mvnw clean package
    ```
 
 3. Run the application:
    ```bash
-   mvn exec:java
+   ./mvnw exec:java
    ```
 
 ## Configuration
