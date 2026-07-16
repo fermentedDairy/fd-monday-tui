@@ -6,12 +6,12 @@
 3. **Core Data Models Design** - Create Ticket, User, and Board data classes that match specification requirements
 
 ## Phase 2: API Integration (High Priority) [PENDING]
-1. **GraphQL Client Implementation** - Implement Monday.com API v2 GraphQL client with proper headers (Authorization, Content-Type, API-Version) 
-2. **Authentication Flow Development** - Build secure token handling mechanism that prompts users once and persists tokens for subsequent sessions
-3. **User Context Retrieval** - Implement `me` query to fetch logged-in user ID required for assignee filtering
-4. **Board Retrieval** - Fetch all boards/projects from Monday.com for project selection functionality
-5. **Status Column Definition Retrieval** - Retrieve status column definitions from boards to determine available statuses dynamically 
-6. **API Client Testing** - Implement unit tests using mock server for GraphQL client against a mock server, plus manual test suite excluded from Maven test target by default
+ 1. **API Client Testing** - Implement unit tests using mock server for GraphQL client against a mock server, plus manual test suite excluded from Maven test target by default
+ 2. **GraphQL Client Implementation** - Implement Monday.com API v2 GraphQL client with proper headers (Authorization, Content-Type, API-Version) 
+ 3. **Authentication Flow Development** - Build secure token handling mechanism that prompts users once and persists tokens for subsequent sessions
+ 4. **User Context Retrieval** - Implement `me` query to fetch logged-in user ID required for assignee filtering
+ 5. **Board Retrieval** - Fetch all boards/projects from Monday.com for project selection functionality
+ 6. **Status Column Definition Retrieval** - Retrieve status column definitions from boards to determine available statuses dynamically 
 
 ## Phase 3: Core Functionality (High Priority) [PENDING]  
 1. **Ticket CRUD Operations** - Implement all CRUD operations through GraphQL:
