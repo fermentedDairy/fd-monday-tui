@@ -40,7 +40,7 @@ class MondayApiMockServer {
                 .withPath("/v2")
                 .withHeader("Authorization", ".*")
                 .withHeader("Content-Type", "application/json")
-                .withHeader("API-Version", "2024-10")
+                .withHeader("API-Version", "2023-10-01")
         )
         .respond(
             HttpResponse.response()
@@ -70,7 +70,7 @@ class MondayApiMockServer {
                 .withPath("/v2")
                 .withHeader("Authorization", ".*")
                 .withHeader("Content-Type", "application/json")
-                .withHeader("API-Version", "2024-10")
+                .withHeader("API-Version", "2023-10-01")
         )
         .respond(
             HttpResponse.response()
@@ -107,7 +107,7 @@ class MondayApiMockServer {
                 .withPath("/v2")
                 .withHeader("Authorization", ".*")
                 .withHeader("Content-Type", "application/json")
-                .withHeader("API-Version", "2024-10")
+                .withHeader("API-Version", "2023-10-01")
         )
         .respond(
             HttpResponse.response()
@@ -137,7 +137,7 @@ class MondayApiMockServer {
                 .withPath("/v2")
                 .withHeader("Authorization", ".*")
                 .withHeader("Content-Type", "application/json")
-                .withHeader("API-Version", "2024-10")
+                .withHeader("API-Version", "2023-10-01")
         )
         .respond(
             HttpResponse.response()

@@ -13,7 +13,27 @@
 - **Test successful responses** - Validate client handles typical success scenarios from Monday.com API v2
 - **Test error responses** - Verify HTTP 4xx/5xx handling with appropriate error messages
 - **Boundary testing** - Use mock servers at API boundaries to isolate unit tests and reduce dependency on class mocks
-- **Test utility implementation** - Integrate MondayApiMockServer for easy test setup of various API scenarios
+- **Test utility implementation** - The MondayApiMockServer is now available in test scope for integration testing of various API scenarios
+
+## 2. Authentication Flow Testing
+- **Token persistence verification** - Validate valid token is securely stored after initial user input  
+- **Token retrieval validation** - Confirm token can be retrieved when needed for API calls 
+- **Token clearing test** - Test log off functionality to securely delete stored token
+- **Authentication validity check** - Verify authentication fails appropriately with invalid tokens
+
+### Security Testing
+- **Secure storage validation** - Ensure tokens are not exposed in logs, console output or plain text files  
+- **Access control enforcement** - Validate unauthorized access attempts are properly rejected
+- **Session management** - Test handling of expired sessions and re-authentication flows
+
+## 3. User Context Integration Tests
+- **User context retrieval test** - Test the me query implementation to fetch logged-in user ID 
+- **User identification validation** - Verify retrieved user ID is correctly used for assignee filtering
+- **Context initialization verification** - Validate user context is properly initialized at application startup
+
+### Context Integration Testing
+- **Board retrieval integration** - Ensure user context works correctly when fetching boards  
+- **Assignee filtering validation** - Test that tickets are filtered by assignee using retrieved user ID
 - **Boundary testing** - Use mock servers at API boundaries to isolate unit tests and reduce dependency on class mocks
 
 ## 2. Authentication Flow Tests
