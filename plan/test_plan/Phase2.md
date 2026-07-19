@@ -13,6 +13,8 @@
 - **Test successful responses** - Validate client handles typical success scenarios from Monday.com API v2
 - **Test error responses** - Verify HTTP 4xx/5xx handling with appropriate error messages
 - **Boundary testing** - Use mock servers at API boundaries to isolate unit tests and reduce dependency on class mocks
+- **Test utility implementation** - Integrate MondayApiMockServer for easy test setup of various API scenarios
+- **Boundary testing** - Use mock servers at API boundaries to isolate unit tests and reduce dependency on class mocks
 
 ## 2. Authentication Flow Tests
 

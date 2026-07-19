@@ -26,6 +26,7 @@ dependencies {
     // Test dependencies
     testImplementation(kotlin("test"))
     testImplementation("org.junit.jupiter:junit-jupiter:5.10.0")
+    testImplementation("org.mock-server:mockserver-netty:5.15.0")
 }
 
 tasks.test {
